@@ -9,7 +9,7 @@ import Icon from './myimage.png';
     element.classList.add('hello');
     // Add the image to our existing div.
     const myIcon = new Image();
-    myIcon.src = './dist/' + Icon;
+    myIcon.src = Icon;
     element.appendChild(myIcon);
     return element;
   }
