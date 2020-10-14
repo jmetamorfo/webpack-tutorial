@@ -8,27 +8,47 @@
     "build": "webpack --config webpack/webpack.prod.js",
     "dev": "webpack --config webpack/webpack.dev.js",
     "dev-serv": "webpack-dev-server --config webpack/webpack.dev.js --open",
-    "watch": "webpack --watch --config webpack/webpack.config.js"
+    "watch": "webpack --watch --config webpack/webpack.config.js",
+    "topic": "cross-env NODE_ENV=development node webpack/webpack.dev-server.js --open",
+    "builder": "cross-env NODE_ENV=production webpack --colors --display-modules --config webpack/webpack.build.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.5.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "babel-polyfill": "^6.26.0",
+    "vue": "^2.5.16"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-vue-app": "^2.0.0",
+    "babelify": "^7.3.0",
     "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^3.5.3",
+    "config": "^3.3.2",
+    "copy-webpack-plugin": "^4.5.1",
+    "cross-env": "^7.0.2",
+    "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
-    "sass-loader": "^8.0.2",
+    "jquery": "^3.5.1",
     "node-sass": "^4.5.3",
+    "openurl": "^1.1.1",
+    "remove-strict-webpack-plugin": "^0.1.2",
+    "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-svgstore-plugin": "^4.1.0",
+    "write-file-webpack-plugin": "^4.5.1"
   }
 }
