@@ -5,8 +5,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack/webpack.config.js",
-    "dev": "webpack-dev-server --open --config webpack/webpack.config.js",
+    "build": "webpack --config webpack/webpack.prod.js",
+    "dev": "webpack --config webpack/webpack.dev.js",
+    "dev-serv": "webpack-dev-server --config webpack/webpack.dev.js --open",
     "watch": "webpack --watch --config webpack/webpack.config.js"
   },
   "keywords": [],
@@ -27,6 +28,7 @@
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2",
     "webpack-dev-server": "^3.11.0"
   }
 }

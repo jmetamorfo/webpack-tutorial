@@ -3,13 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-
-function resolve(dir) {
-  return path.join(__dirname, "..", dir);
-}
-
 module.exports = {
-  mode: 'development',
   entry: {
     app: './src/index.js',
     print: './src/print.js'
@@ -26,15 +20,6 @@ module.exports = {
     }),
     new ExtractTextPlugin("./css/main.css")
   ],
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './dist'
-  },
-  output: {
-    filename: '[name].bundle.js',
-    path: resolve('dist'),
-    publicPath: "/dist/"
-  },
   module: {
     rules: [
       {
@@ -53,15 +38,11 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]"
+        }
       }
     ]
-  },
-  resolve: {
-    alias: {
-      styles: path.resolve(__dirname, "../src/scss/")
-    }
   }
 };
