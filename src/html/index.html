@@ -1,41 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+	<meta charset="UTF-8">
+	<title>Component Testing</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/dist/main.css" crossorigin="anonymous">
-    <!--script src="https://unpkg.com/lodash@4.16.6"></script-->
-    <title>Getting Started Webpack and Bootstrap!</title>
-  </head>
-  <body>
-    <h1>Getting Started Webpack and Bootstrap! xxx</h1>
-    
-    
-    <div class="container">
-      <div class="row">
-        <div class="col">1</div>
-        <div class="col">2</div>
-        <div class="col">3</div>
-        <div class="col">4</div>
-        <div class="col">5</div>
-        <div class="col">6</div>
-        <div class="col">7</div>
-        <div class="col">8</div>
-        <div class="col">9</div>
-        <div class="col"><a href="login.html">LOGIN</a></div>
+	<link rel="stylesheet" type="text/css" href="/dist/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Roboto" rel="stylesheet">
+
+
+	<style>
+		html, body {
+			padding: 0;
+			margin: 0;
+		}
+		div[data-vue] {
+			min-height: 100vh; border:1px solid black; }
+
+		button {
+			border: 2px solid black; padding: 5px;
+		}
+
+
+	</style>
+
+
+	<script>
+	</script>
+</head>
+<body>
+
+<section class="philosophy-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 order-md-6 text-center">
+        <h2>Notre Philosophie</h2>
+        <p>A La Rôtisserie, nous sommes attachés à la cuisine traditionnelle : nous travaillons des produits frais, achetés en direct au producteur. Nous épluchons, coupons et faisons cuire nos légumes et sommes livrés chaque jour de pain et pâtisseries fraiches.<br>
+          Nos poulets et nos viandes sont d’origine française, élevés en plein air. Chaque recette est élaborée par notre Chef Antoine, avec un seul objectif : ravir vos papilles ! </p>
+        <h3>“Des produits frais et de qualité pour
+          réaliser des recettes pleines d’amour”</h3>
+        <p>
+          Laissez-vous emporter par vos souvenirs d’enfance en retrouvant l’odeur du poulet qui a cuit doucement sur sa broche… et surprendre par notre purée à la truffe, nos aubergines parmesanes, ou notre gratin dauphinois…<br>
+          Et pour sublimer nos poulets rôtis et nos viandes grillées, cédez à la tentation d’une sauce maison : chaude ou froide, vous avez le choix !
+        </p>
+      </div>
+      <div class="col-12 col-md-6 order-md-0">
+        <div class="row ">
+          <div class="col pr-0">
+            <div class="square-image">
+              <img class="img-fluid inner-border" src="/images/dummy/aubergine.jpg">
+            </div>
+          </div>
+          <div class="col pl-0">
+            <div class="square-image">
+              <img class="img-fluid inner-border" src="/images/dummy/aubergine.jpg">
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <div class="col pr-0">
+            <div class="square-image">
+              <img class="img-fluid inner-border" src="/images/dummy/aubergine.jpg">
+            </div>
+          </div>
+          <div class="col pl-0">
+            <div class="square-image">
+              <img class="img-fluid inner-border" src="/images/dummy/aubergine.jpg">
+            </div>
+          </div>
+          <div class="centered-circle ">
+            Les recettes<br>
+            de notre chef<br>
+            <span class="text-title">Antoine</span>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+	<div data-vue="*">
+    <address-list></address-list>
+	</div>
+	<div data-vue="*">
+		<hello-world></hello-world>
+		<lorem-ipsum repeat="5"></lorem-ipsum>
+	</div>
+	<div data-vue="*">
+		<hello-world></hello-world>
+		<lorem-ipsum repeat="5"></lorem-ipsum>
+	</div>
+	<div data-vue="*">
+		<hello-world title="yehaa"></hello-world>
+		<lorem-ipsum repeat="5"></lorem-ipsum>
+	</div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <!--script src="./src/index.js"></script-->
-    <script src="./dist/app.bundle.js"></script>
-    <script src="./dist/print.bundle.js"></script>
-  </body>
+
+	<script type="text/javascript" src="/dist/bundle.js"></script>
+</body>
 </html>
